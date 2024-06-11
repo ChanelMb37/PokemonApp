@@ -1,4 +1,10 @@
-<h1 class="center">Liste des pokémons</h1>
+<nav>
+  <div class="nav-wrapper teal">
+    <a href="#" class="brand-logo center"> Pokédex</a>
+  </div>
+</nav>
+<!-- a chake fois ke l'url va venir bouger dans le navigateur de l'utilisateur,angular recupere le composant associé dans app-routing et venir injecter le contenu de ce composant a la place de router-outlet -->
+<router-outlet></router-outlet>
 
 <!-- <input #input (keyup.enter)="selectPokemon(input.value)" type="number" />
 
@@ -7,27 +13,3 @@
 </p>
 
 <p *ngIf="!pokemonSelected">Aucun pokémon n'a été trouvé !</p> -->
-<div class="container">
-  <div class="row">
-    <div *ngFor="let pokemon of pokemonsList" class="col m4 s6">
-      <div
-        class="card horizontal"
-        (click)="selectPokemon(pokemon.id)"
-        pkmnBorderCard
-      >
-        <div class="card-image">
-          <img src="{{ pokemon.picture }}" />
-        </div>
-        <div class="card-stacked">
-          <div class="card-content">
-            <p>{{ pokemon.name }}</p>
-            <p>
-              <small>{{ pokemon.created | date : "dd/MM/yyyy/" }}</small>
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- {{ pokemon.name }} -->
-    </div>
-  </div>
-</div>
