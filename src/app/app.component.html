@@ -12,7 +12,7 @@
     <div *ngFor="let pokemon of pokemonsList" class="col m4 s6">
       <div
         class="card horizontal"
-        (click)="selectPokemon(pokemon)"
+        (click)="selectPokemon(pokemon.id)"
         pkmnBorderCard
       >
         <div class="card-image">

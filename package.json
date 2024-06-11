@@ -26,6 +26,7 @@
     "@angular-devkit/build-angular": "^16.2.14",
     "@angular/cli": "^16.2.14",
     "@angular/compiler-cli": "^16.2.0",
+    "ember-cli-materialize": "^0.22.0",
     "typescript": "~5.1.3"
   }
 }

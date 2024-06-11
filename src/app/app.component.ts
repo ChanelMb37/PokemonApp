@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     console.table(this.pokemonsList);
   }
-  selectPokemon(pokemonId: string) {
+  selectPokemon(pokemonId: number) {
     const pokemon: Pokemon | undefined = this.pokemonsList.find(
       (pokemon) => pokemon.id == +pokemonId
     );

@@ -5,8 +5,8 @@ import { Directive, ElementRef, HostListener } from "@angular/core";
 })
 export class BorderCardDirective {
   constructor(private el: ElementRef) {
-    this.setHeight(180);
     this.setBorder("#f5f5f5");
+    this.setHeight(180);
   }
   //ecouter l'événement MouseEnter
   //lorske l'événement MouseEnter est appelé ,on modifie la couleur des bordures
@@ -20,15 +20,15 @@ export class BorderCardDirective {
     this.setBorder("#f5f5f5");
   }
 
-  // private setBorder(color: string) {
-  //   let border = " solid 4px " + color;
-  //   this.el.nativeElement.style.border = border;
-  // }
+  private setBorder(color: string) {
+    let border = " solid 4px " + color;
+    this.el.nativeElement.style.border = border;
+  }
   setHeight(height: number) {
     this.el.nativeElement.style.height = `${height}px`;
   }
 
-  setBorder(color: string) {
-    this.el.nativeElement.style.border = `solid 4px ${color}`;
-  }
+  // setBorder(color: string) {
+  //   this.el.nativeElement.style.border = `solid 4px ${color}`;
+  // }
 }
