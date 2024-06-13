@@ -12,12 +12,14 @@ export class PokemonFormComponent implements OnInit {
   @Input() pokemon: Pokemon;
 
   types: string[];
+  isAddForm: boolean;
 
   constructor(private pokemonService: PokemonService, private router: Router) {}
 
   ngOnInit() {
     //pokemonList
     this.types = this.pokemonService.getPokemonTypeList();
+    this.isAddForm = this.router.url.includes("add");
   }
 
   hasType(type: string): boolean {
